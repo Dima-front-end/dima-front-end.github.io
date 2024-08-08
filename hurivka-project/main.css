@@ -31,6 +31,9 @@ section {
   margin-top: 1rem;
   text-align: center;
 }
+.question {
+  height: 3rem;
+}
 
 .variants {
   display: flex;
