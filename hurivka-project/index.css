@@ -1,0 +1,138 @@
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url('./images/quiz-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fcfcfc;
+  margin-top: 15rem;
+  z-index: 10;
+}
+.container__start-quiz {
+  border: none;
+  background-color: #668246;
+  padding: 0.75rem 1.4rem;
+  font-size: 1.3rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.35s;
+  margin-top: -0.1rem;
+}
+a {
+  color: #fcfcfc;
+  text-decoration: none;
+}
+.container__start-quiz:hover {
+    background-color: #81a558;
+    transition: 0.35s;
+    padding: 0.75rem 2rem;
+}
+.container__title {
+  font-size: 3.2rem;
+  transition: 0.3s;
+  margin-bottom: -0.1rem;
+}
+.container__title:hover {
+  font-size: 3.4rem;
+  transition: 0.3s;
+}
+.container__description {
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+.container__description:hover {
+  font-size: 1.7rem;
+  transition: 0.3s;
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.75);
+  transition: opacity 0.5s ease;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 19rem auto;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 1.5rem;
+  width: 80%;
+  max-width: 40rem;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.modal-content p {
+  font-size: 1.2rem;
+  letter-spacing: 0.04rem;
+  line-height: 150%;
+}
+.modal-content button {
+  border: none;
+  background-color: #668246;
+  color: #fcfcfc;
+  padding: 0.8rem 1.1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.35s;
+  margin-top: -1.75%;
+  float: right;
+}
+.modal-content button:hover {
+  background-color: #94bd66;
+  transition: 0.35s;
+}
+.close {
+  color: #aaa;
+  float: right;
+  margin-right: -0.9rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer {
+  align-items: center;
+  text-align: center;
+  color: white;
+  z-index: 10000;
+  margin-top: 16rem;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4rem;
+  text-decoration: underline;
+}

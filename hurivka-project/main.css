@@ -1,0 +1,352 @@
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #fcfcfc;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 6rem;
+}
+.close-window {
+  text-decoration: none;
+  font-size: 2.4rem;
+  margin-left: -3.5rem;
+  color: rgba(0,0,0,0.6);
+  cursor: pointer;
+}
+.timer {
+  font-size: 1.5rem;
+  background-color: rgba(0,0,0,0.4);
+  color: #fcfcfc;
+  padding: 0.5rem 1.25rem;
+  margin-top: 0.4rem;
+  border-radius: 0.4rem;
+}
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.variants {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 2rem;
+  margin-top: 3rem; 
+}
+
+.variants div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+#variant-1,
+#variant-2,
+#variant-3,
+#variant-4 {
+  background-color: #668246;
+  color: #fcfcfc;
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.35rem;
+  cursor: pointer;
+  transition: 0.4s;
+  max-width: 30rem;
+  width: 20rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  white-space: normal;  /* Allow the text to wrap */
+  word-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+#variant-1:hover,
+#variant-2:hover,
+#variant-3:hover,
+#variant-4:hover {
+    background:  #94bd66;
+    transition: 0.4s;
+}
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.75);
+    transition: opacity 0.5s ease;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 19rem auto;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 1.5rem;
+    width: 80%;
+    max-width: 40rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .modal-content p {
+    font-size: 1.2rem;
+    letter-spacing: 0.04rem;
+    line-height: 150%;
+  }
+  .modal-content button {
+    border: none;
+    background-color: #e74646;
+    color: #fcfcfc;
+    padding: 0.8rem 1.1rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.35s;
+    margin-top: -1.75%;
+    float: right;
+  }
+  .modal-content button:hover {
+    background-color: #ba1818;
+    transition: 0.35s;
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    margin-right: -0.9rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  .custom-modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 2rem;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.custom-modal-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-modal-close:hover,
+.custom-modal-close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 892px) {    
+.variants {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  gap: 1rem;
+  margin-top: 4rem; 
+}
+
+.timer {
+  margin-right: -4rem;
+  margin-top: 0.4rem;
+  font-size: 1.5rem;
+  background-color: rgba(0,0,0,0.4);
+  color: #fcfcfc;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.4rem;
+}
+
+.variants div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+#variant-1,
+#variant-2,
+#variant-3,
+#variant-4 {
+  background-color: #668246;
+  color: #fcfcfc;
+  padding: 1.25rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.4s;
+  max-width: 25rem;
+  width: 18rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+#variant-1:hover,
+#variant-2:hover,
+#variant-3:hover,
+#variant-4:hover {
+    background:  #94bd66;
+    transition: 0.4s;
+}
+footer {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}
+}
+
+@media (max-width: 698px) {    
+  .variants {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1rem; 
+    gap: 0.8rem;
+  }
+  
+  .variants div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+  
+  #variant-1,
+  #variant-2,
+  #variant-3,
+  #variant-4 {
+    background-color: #668246;
+    color: #fcfcfc;
+    padding: 1.25rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.4s;
+    max-width: 35rem;
+    width: 35rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+  
+  #variant-1:hover,
+  #variant-2:hover,
+  #variant-3:hover,
+  #variant-4:hover {
+      background:  #94bd66;
+      transition: 0.4s;
+  }
+  footer {
+      text-align: center;
+      margin-top: 1.6rem;
+      font-size: 1.5rem;
+  }
+  }
+
+  @media (max-width: 610px) { 
+
+
+    #variant-1,
+    #variant-2,
+    #variant-3,
+    #variant-4 {
+      max-width: 28rem;
+      width: 28rem;
+      height: 3rem;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 1.5rem;
+  }
+  .variants {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem; 
+  }
+  }
+  @media (max-width: 516px) { 
+
+    #variant-1,
+    #variant-2,
+    #variant-3,
+    #variant-4 {
+      max-width: 22rem;
+      width: 22rem;
+      height: 3rem;
+    }
+    
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      font-size: 1.5rem;
+  }
+  .variants {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 4rem; 
+    gap: 0.2rem;
+  }
+  }

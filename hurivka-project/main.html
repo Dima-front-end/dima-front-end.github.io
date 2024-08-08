@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link type="image/x-icon" href="./images/brain.png" rel="shortcut icon">
+  <link type="Image/x-icon" href="./images/brain.png" rel="icon">
+  <link rel="stylesheet" href="main.css">
+  <title>Quiz</title>
+</head>
+<body>
+  <header>
+    <div id="openModal" class="close-window">&times;</div>
+    <div class="timer">
+      <span id="timer1">20</span>
+      <span>:</span>
+      <span id="timer2">00</span>
+    </div>
+  </header>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Якщо Ви вийдете з тесту, відповіді не збережуться. Ви впевнені, що хочете покинути вікторину?</p>
+      <a href="./index.html"><button>Вийти</button></a>    
+    </div>
+  </div>
+  <section>
+    <h2 id="question" class="question">Яка з перерахованих культур, ймовірно, вирощується в селі Гурівка?</h2>
+    <div class="variants">
+      <div>
+        <div id="variant-1">Виноград</div>
+        <div id="variant-2">Картопля</div>
+      </div>
+      <div>
+        <div id="variant-3">Какао-боби</div>
+        <div id="variant-4">Чай</div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p><span id="number-question">1</span> / 9</p>
+  </footer>
+  <div id="quizResultModal" class="custom-modal hidden">
+    <div class="custom-modal-content">
+      <span id="closeQuizModal" class="custom-modal-close">&times;</span>
+      <h2 id="quizModalTitle"></h2>
+      <p id="quizModalMessage"></p>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
