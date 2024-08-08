@@ -288,10 +288,10 @@ footer {
     word-wrap: break-word;
   }
   
-  #variant-1:hover,
-  #variant-2:hover,
-  #variant-3:hover,
-  #variant-4:hover {
+  #variant-1:active,
+  #variant-2:active,
+  #variant-3:active,
+  #variant-4:active {
       background:  #94bd66;
       transition: 0.4s;
   }
@@ -327,6 +327,20 @@ footer {
   }
   }
   @media (max-width: 516px) { 
+    #variant-1:active,
+    #variant-2:active,
+    #variant-3:active,
+    #variant-4:active {
+        background:  #94bd66;
+        transition: 0.4s;
+    }
+    #variant-1:hover,
+    #variant-2:hover,
+    #variant-3:hover,
+    #variant-4:hover {
+        background:  #668246;
+        transition: 0.4s;
+    }
 
     #variant-1,
     #variant-2,
@@ -339,14 +353,13 @@ footer {
     
     footer {
       text-align: center;
-      margin-top: 3.5rem;
+      margin-top: 2rem;
       font-size: 1.5rem;
   }
   .variants {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 4rem; 
-    gap: 0.2rem;
+    margin-top: 2rem; 
   }
   }
